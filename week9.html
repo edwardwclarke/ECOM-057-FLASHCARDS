@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Week 9 - Growth Investing Flashcards</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
       margin: 0;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
     }
+
     h1 {
       text-align: center;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
     }
-    .flashcard-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+
+    .flashcard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .flashcard {
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 300px;
-      height: 200px;
+
+    .card {
       perspective: 1000px;
-      cursor: pointer;
     }
-    .flashcard-inner {
+
+    .card-inner {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 180px;
       text-align: center;
       transition: transform 0.6s;
       transform-style: preserve-3d;
+      cursor: pointer;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
     }
-    .flashcard:hover .flashcard-inner {
+
+    .card.flipped .card-inner {
       transform: rotateY(180deg);
     }
-    .flashcard-front, .flashcard-back {
+
+    .card-face {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -48,91 +58,91 @@
       align-items: center;
       justify-content: center;
       padding: 1rem;
+      border-radius: 1rem;
       box-sizing: border-box;
     }
-    .flashcard-front {
-      background: #e0f7fa;
+
+    .card-front {
+      background-color: #e0f2fe;
+      font-weight: 600;
     }
-    .flashcard-back {
-      background: #ffe0b2;
+
+    .card-back {
+      background-color: #fef3c7;
       transform: rotateY(180deg);
     }
   </style>
 </head>
 <body>
-  <h1>Week 9: Growth Investing – Flashcards</h1>
-  <div class="flashcard-container">
 
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is a growth investor?</div>
-        <div class="flashcard-back">Someone who tries to estimate the value of future growth assets better than the market.</div>
-      </div>
+<h1>Week 9 – Growth Investing Flashcards</h1>
+<div class="flashcard-grid">
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What is a growth investor?</div>
+      <div class="card-face card-back">Someone who estimates the value of growth assets better than the market.</div>
     </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">Name the four types of growth investors.</div>
-        <div class="flashcard-back">Small Cap Investor, IPO Investor, Passive Screener, Activist Investor</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is the small cap premium?</div>
-        <div class="flashcard-back">The idea that small firms earn higher returns than large firms of similar risk, but it's cyclical and volatile.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">Why do small caps carry higher transaction costs?</div>
-        <div class="flashcard-back">They have wider bid-ask spreads and greater price impact when traded, especially in the short term.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is IPO underpricing?</div>
-        <div class="flashcard-back">It’s when the initial share price is set below market value, often by 10–15%, creating a first-day jump in price.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is the allocation problem in IPO investing?</div>
-        <div class="flashcard-back">You may get more shares in lower-quality IPOs and fewer in high-demand ones, reducing expected gains.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is the goal of a passive screener?</div>
-        <div class="flashcard-back">To use indicators like earnings momentum or PEG ratios to find undervalued growth stocks.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">Why is earnings growth a risky indicator?</div>
-        <div class="flashcard-back">It's volatile, mean-reverting, and affected by non-operational factors like taxes and leverage.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What does a low PEG ratio suggest?</div>
-        <div class="flashcard-back">That a stock is cheap relative to its earnings growth; may generate higher average returns before adjusting for risk.</div>
-      </div>
-    </div>
-
-    <div class="flashcard">
-      <div class="flashcard-inner">
-        <div class="flashcard-front">What is the strategy of an activist growth investor?</div>
-        <div class="flashcard-back">To intervene in company management to unlock hidden value and growth potential.</div>
-      </div>
-    </div>
-
   </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What are the four types of growth investors?</div>
+      <div class="card-face card-back">Small Cap, IPO, Passive Screener, Activist Investor</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">Why can small caps outperform?</div>
+      <div class="card-face card-back">They have more growth potential, especially during high inflation or downward yield curves.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What are risks of investing in small caps?</div>
+      <div class="card-face card-back">Higher transaction costs, less analyst coverage, and high volatility.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What is IPO underpricing?</div>
+      <div class="card-face card-back">Initial shares are often priced 10–15% below market value to attract investors.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What's the allocation problem in IPO investing?</div>
+      <div class="card-face card-back">You often get fewer shares in good IPOs and more in less popular ones.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What does a passive screener do?</div>
+      <div class="card-face card-back">Ranks stocks based on indicators like earnings growth and PEG ratios.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">Why is PEG ratio useful?</div>
+      <div class="card-face card-back">It helps compare stock prices relative to their earnings growth. Lower PEG = cheaper growth.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What does an activist growth investor do?</div>
+      <div class="card-face card-back">Takes an active role in management to unlock value and guide company growth.</div>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
+
