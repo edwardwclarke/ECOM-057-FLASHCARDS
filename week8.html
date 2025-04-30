@@ -14,14 +14,34 @@
 
     h1 {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem 1rem;
       font-size: 2rem;
       font-weight: 600;
     }
 
+    .home-button {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .home-button a {
+      display: inline-block;
+      background-color: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .home-button a:hover {
+      background-color: #1e40af;
+    }
+
     .flashcard-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
       max-width: 1200px;
@@ -35,14 +55,13 @@
     .card-inner {
       position: relative;
       width: 100%;
-      height: 180px;
+      height: 160px;
       text-align: center;
       transition: transform 0.6s;
       transform-style: preserve-3d;
       cursor: pointer;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      background-color: #fff;
     }
 
     .card.flipped .card-inner {
@@ -63,7 +82,7 @@
     }
 
     .card-front {
-      background-color: #e0f2fe;
+      background-color: #dbeafe;
       font-weight: 600;
     }
 
@@ -71,121 +90,61 @@
       background-color: #fef3c7;
       transform: rotateY(180deg);
     }
-
-    .home-button {
-      display: block;
-      text-align: center;
-      margin-bottom: -1rem;
-      padding: 1rem;
-    }
-
-    .home-button a {
-      text-decoration: none;
-      background: #2563eb;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 999px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .home-button a:hover {
-      background: #1e40af;
-    }
   </style>
 </head>
 <body>
 
-  <h1>Week 8 – Value Investing Flashcards</h1>
-  <div class="home-button">
-    <a href="#">🔙 Return to Home</a>
-  </div>
+<h1>📘 Value Investing – Week 8 Flashcards</h1>
+<div class="home-button">
+  <a href="https://edwardwclarke.github.io/ECOM-057-FLASHCARDS/">🔙 Return to Home</a>
+</div>
 
-  <div class="flashcard-grid">
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What is a value investor?</div>
-        <div class="card-face card-back">Someone who buys a stock if it’s cheaper than the value of its current assets. Like buying a shop worth £70 for £50.</div>
-      </div>
-    </div>
+<div class="flashcard-grid">
 
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What are the 3 types of value investors?</div>
-        <div class="card-face card-back">Passive Screener, Contrarian, and Activist investors. Each finds undervalued stocks differently.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What does a passive screener do?</div>
-        <div class="card-face card-back">Uses filters like low PE or PBV to find cheap stocks. Like using a checklist to buy toys on sale.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What does a contrarian investor believe?</div>
-        <div class="card-face card-back">Markets overreact. They buy “loser” stocks expecting a rebound—like picking a toy no one wants, hoping it gets cool again.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">Who are activist investors?</div>
-        <div class="card-face card-back">They invest in underperforming companies and try to change how they’re run to boost value—like fixing a messy lemonade stand.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">How do activist investors create value?</div>
-        <div class="card-face card-back">By changing asset use, capital structure, cash policies, or management/governance.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">Are activist strategies always successful?</div>
-        <div class="card-face card-back">No. About 29% succeed. They do better with restructuring or selling the firm than replacing CEOs or demanding dividends.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">How do markets react to activist investors?</div>
-        <div class="card-face card-back">Markets usually react positively, especially before the activist announcement is made public.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What does evidence say about contrarian investing?</div>
-        <div class="card-face card-back">Loser stocks often outperform winners over long periods, but it takes time and patience to work.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">What traits does a contrarian investor need?</div>
-        <div class="card-face card-back">Confidence, patience, resilience to bad performance, and awareness of costs like transaction fees.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">Why are Graham's screens useful?</div>
-        <div class="card-face card-back">Low PE, low PBV, and high dividend yields can help find undervalued stocks—but understanding context is key.</div>
-      </div>
-    </div>
-
-    <div class="card" onclick="this.classList.toggle('flipped')">
-      <div class="card-inner">
-        <div class="card-face card-front">Can investors follow Buffett's method easily?</div>
-        <div class="card-face card-back">Not easily—today’s markets are more crowded and efficient. Buffett also uses activism and patience.</div>
-      </div>
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What is a value investor?</div>
+      <div class="card-face card-back">Someone who buys companies for less than the value of their existing assets.</div>
     </div>
   </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What does a contrarian investor do?</div>
+      <div class="card-face card-back">Buys unpopular “loser” stocks, believing the market has overreacted.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What are activist investors?</div>
+      <div class="card-face card-back">Investors who push for changes in how a company is run to increase its value.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What is a passive screener?</div>
+      <div class="card-face card-back">Someone who uses filters like low PE or PBV to find undervalued stocks.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What changes do activists push for?</div>
+      <div class="card-face card-back">Fixing bad assets, adjusting debt, improving leadership, and giving back cash.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-face card-front">What do contrarians need to succeed?</div>
+      <div class="card-face card-back">Confidence, patience, and ability to handle short-term losses or ridicule.</div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
+
